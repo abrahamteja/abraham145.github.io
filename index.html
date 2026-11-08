@@ -1,263 +1,718 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
+<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-L1JH2VK0Z3"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-L1JH2VK0Z3');
 </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abraham Tejada | Digital Portfolio 2025</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary-text: #ffffff;
-            --secondary-text: #e0e0e0;
-            --accent-glow: #00e5ff;
-            --card-background: rgba(20, 20, 30, 0.6);
-            --border-color: rgba(255, 255, 255, 0.2);
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Abraham Tejada | Technical Program Manager &amp; Engineer</title>
+<meta name="description" content="Abraham Tejada leads AI and platform programs from plan to production and writes the code too. 17+ years at Warner Bros. Discovery, Meta, Barclaycard and Verizon.">
+<link rel="canonical" href="https://abraham-tejada.me/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://abraham-tejada.me/">
+<meta property="og:title" content="Abraham Tejada, Technical Program Manager &amp; Engineer">
+<meta property="og:description" content="Abraham Tejada leads AI and platform programs from plan to production and writes the code too. 17+ years at Warner Bros. Discovery, Meta, Barclaycard and Verizon.">
+<meta property="og:image" content="https://abraham-tejada.me/Abraham.png">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#E9EDEA" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0B1413" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%2310201E'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-family='Arial Narrow,Arial,sans-serif' font-weight='800' font-size='30' fill='%23E9EDEA'%3EAT%3C/text%3E%3Crect x='14' y='50' width='36' height='4' fill='%23B97706'/%3E%3C/svg%3E">
+<script>try{var t=localStorage.getItem('at-theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;700&family=Big+Shoulders+Display:wght@700;800&family=JetBrains+Mono:wght@400;700&display=swap">
+<style>
+/* Layout concept: a career laid out like a program plan. Graph-paper ground, a status report up top,
+   the critical path as a Gantt chart, shipped work as delivery cards, milestones as amber diamonds. */
+:root {
+  --paper:   #E9EDEA;
+  --sheet:   #F6F8F6;
+  --ink:     #10201E;
+  --muted:   #4F5F5B;
+  --rule:    #C3CDC9;
+  --grid:    rgba(16, 32, 30, 0.045);
+  --accent:  #0D6A66;
+  --accent-soft: rgba(13, 106, 102, 0.12);
+  --signal:  #B97706;
+  --signal-soft: rgba(185, 119, 6, 0.14);
+  --ok:      #2F7D4F;
+  --on-accent: #F6F8F6;
 
-        body {
-            font-family: 'Inter', sans-serif;
-            margin: 0;
-            padding: 20px;
-            color: var(--primary-text);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            overflow-x: hidden; /* Prevent horizontal scrolling */
-            background: #0f0c29;
-        }
+  --f-display: "Big Shoulders Display", "Arial Narrow", "Roboto Condensed", Impact, sans-serif;
+  --f-body: "Atkinson Hyperlegible Next", "Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
+  --f-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
 
-        #gradient-canvas {
-            width:100%;
-            height:100%;
-            --gradient-color-1: #1e3a8a;
-            --gradient-color-2: #4338ca;
-            --gradient-color-3: #1e1b4b;
-            --gradient-color-4: #312e81;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: -1;
-        }
+  --step--1: clamp(0.8rem, 0.78rem + 0.1vw, 0.86rem);
+  --step-0: clamp(1rem, 0.97rem + 0.15vw, 1.08rem);
+  --step-1: clamp(1.2rem, 1.1rem + 0.45vw, 1.45rem);
+  --step-2: clamp(1.6rem, 1.35rem + 1.1vw, 2.3rem);
+  --step-3: clamp(2.4rem, 1.7rem + 3vw, 4.2rem);
+  --step-4: clamp(3.4rem, 2rem + 6.4vw, 7.6rem);
+  --radius: 6px;
+  --maxw: 1180px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0B1413; --sheet: #111D1C; --ink: #E3ECE8; --muted: #93A49F; --rule: #24393A;
+    --grid: rgba(227, 236, 232, 0.035); --accent: #45C2B6; --accent-soft: rgba(69, 194, 182, 0.14);
+    --signal: #F0B13C; --signal-soft: rgba(240, 177, 60, 0.15); --ok: #5BC48A; --on-accent: #0B1413;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #0B1413; --sheet: #111D1C; --ink: #E3ECE8; --muted: #93A49F; --rule: #24393A;
+  --grid: rgba(227, 236, 232, 0.035); --accent: #45C2B6; --accent-soft: rgba(69, 194, 182, 0.14);
+  --signal: #F0B13C; --signal-soft: rgba(240, 177, 60, 0.15); --ok: #5BC48A; --on-accent: #0B1413;
+  color-scheme: dark;
+}
 
-        .container {
-            background: var(--card-background);
-            padding: 20px;
-            border-radius: 20px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid var(--border-color);
-            text-align: center;
-            max-width: 600px;
-            width: 90%;
-            transform-style: preserve-3d;
-            transition: transform 0.1s ease;
-        }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation: none !important; transition: none !important; } }
+body {
+  margin: 0;
+  background-color: var(--paper);
+  background-image:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 28px 28px;
+  color: var(--ink);
+  font-family: var(--f-body);
+  font-size: var(--step-0);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+body::before {
+  content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px);
+  z-index: 10; background: var(--paper);
+}
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 3px; }
+.wrap {
+  max-width: var(--maxw); margin: 0 auto;
+  padding-left: max(20px, env(safe-area-inset-left, 0px));
+  padding-right: max(20px, env(safe-area-inset-right, 0px));
+}
+.mono { font-family: var(--f-mono); font-size: var(--step--1); letter-spacing: 0.02em; }
+.eyebrow {
+  font-family: var(--f-mono); font-size: 0.74rem; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--muted); margin: 0;
+}
+h1, h2, h3 { text-wrap: balance; margin: 0; }
+.skip { position: absolute; left: -999px; top: 8px; background: var(--ink); color: var(--paper); padding: 8px 12px; z-index: 20; }
+.skip:focus { left: 16px; }
 
-        .profile-img {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid var(--accent-glow);
-            box-shadow: 0 0 25px rgba(0, 229, 255, 0.7);
-            margin-bottom: 20px;
-        }
+/* ---------- top bar ---------- */
+.bar {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5;
+  background: color-mix(in srgb, var(--paper) 88%, transparent);
+  backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--rule);
+}
+.bar .wrap { display: flex; align-items: center; gap: 16px; padding-block: 10px; }
+.mark {
+  display: inline-grid; place-items: center; width: 34px; height: 34px; border-radius: 4px;
+  background: var(--ink); color: var(--paper); font-family: var(--f-display); font-weight: 800;
+  font-size: 1.05rem; letter-spacing: 0.04em; text-decoration: none; flex: none;
+}
+.nav { display: flex; gap: 4px 18px; flex-wrap: wrap; margin-left: auto; align-items: center; }
+.nav a {
+  font-family: var(--f-mono); font-size: 0.78rem; text-decoration: none; color: var(--muted);
+  letter-spacing: 0.04em; padding: 4px 0;
+}
+.nav a:hover { color: var(--ink); }
+.theme-btn {
+  border: 1px solid var(--rule); background: var(--sheet); color: var(--ink); border-radius: 999px;
+  width: 34px; height: 34px; display: inline-grid; place-items: center; cursor: pointer; flex: none;
+}
+.theme-btn svg { width: 16px; height: 16px; }
+@media (max-width: 720px) { .nav a.opt { display: none; } }
 
-        h1 {
-            font-size: 2.2em;
-            margin: 0 0 10px;
-            font-weight: 700;
-            letter-spacing: 1px;
-        }
+/* ---------- hero ---------- */
+.hero { padding-block: clamp(40px, 7vw, 88px) clamp(32px, 5vw, 56px); }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: clamp(28px, 5vw, 64px); align-items: end; }
+.hero h1 {
+  font-family: var(--f-display); font-weight: 800; font-size: var(--step-4); line-height: 0.86;
+  letter-spacing: -0.01em; text-transform: uppercase; margin-top: 18px;
+}
+.hero h1 .ln2 { color: var(--accent); display: block; }
+.lede { font-size: var(--step-1); line-height: 1.45; max-width: 34ch; margin: 26px 0 0; }
+.lede strong { font-weight: 700; }
+.sub { color: var(--muted); max-width: 56ch; margin: 14px 0 0; }
+.cta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+.btn {
+  display: inline-flex; align-items: center; gap: 9px; padding: 11px 18px; border-radius: var(--radius);
+  font-weight: 700; text-decoration: none; border: 1.5px solid var(--ink); font-size: 0.95rem;
+  transition: transform .15s ease, background-color .15s ease, color .15s ease;
+}
+.btn svg { width: 17px; height: 17px; fill: currentColor; flex: none; }
+.btn.primary { background: var(--ink); color: var(--paper); }
+.btn.primary:hover { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+.btn.ghost { background: transparent; color: var(--ink); }
+.btn.ghost:hover { background: var(--ink); color: var(--paper); }
+.btn:active { transform: translateY(1px); }
 
-        .intro-text {
-            font-size: 1.1em;
-            color: var(--secondary-text);
-            min-height: 50px;
-            font-weight: 300;
-        }
+/* status report */
+.report {
+  background: var(--sheet); border: 1.5px solid var(--ink); border-radius: var(--radius);
+  box-shadow: 6px 6px 0 var(--ink);
+}
+.report-head { display: flex; gap: 14px; align-items: center; padding: 16px 18px; border-bottom: 1px dashed var(--rule); }
+.avatar {
+  width: 64px; height: 64px; border-radius: 4px; object-fit: cover; flex: none;
+  background: var(--accent-soft); border: 1px solid var(--rule);
+}
+.report-head h2 { font-family: var(--f-display); font-weight: 700; font-size: 1.45rem; text-transform: uppercase; letter-spacing: 0.02em; line-height: 1; }
+.report-head p { margin: 4px 0 0; }
+.report ul { list-style: none; margin: 0; padding: 6px 18px 4px; }
+.report li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 12px; align-items: baseline; padding: 11px 0; border-bottom: 1px solid var(--rule); }
+.report li:last-child { border-bottom: 0; }
+.report .what { font-weight: 700; }
+.report .what span { display: block; font-weight: 400; color: var(--muted); font-size: 0.88rem; }
+.pill {
+  font-family: var(--f-mono); font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase;
+  display: inline-flex; align-items: center; gap: 7px; padding: 3px 9px; border-radius: 999px; white-space: nowrap;
+  background: var(--accent-soft); color: var(--accent);
+}
+.pill::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
+.pill.open { background: var(--signal-soft); color: var(--signal); }
+.pill.open::before { animation: blip 2.2s ease-in-out infinite; }
+@keyframes blip { 0%, 100% { opacity: 1; } 50% { opacity: .35; } }
+.report-foot { padding: 10px 18px 14px; color: var(--muted); }
 
-        .typewriter-cursor {
-            display: inline-block;
-            width: 2px;
-            height: 1.1em;
-            background-color: var(--accent-glow);
-            animation: blink 0.8s infinite;
-            vertical-align: bottom;
-        }
+/* ---------- stats ---------- */
+.stats { border-block: 1.5px solid var(--ink); background: var(--sheet); }
+.stats .wrap { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.stat { padding: 22px 18px 20px; border-left: 1px solid var(--rule); }
+.stat:first-child { border-left: 0; padding-left: 0; }
+.stat b {
+  display: block; font-family: var(--f-display); font-weight: 800; font-size: var(--step-3); line-height: 0.95;
+  font-variant-numeric: tabular-nums; letter-spacing: -0.01em;
+}
+.stat b em { font-style: normal; color: var(--accent); }
+.stat span { display: block; margin-top: 8px; color: var(--muted); font-size: 0.9rem; line-height: 1.4; max-width: 24ch; }
 
-        @keyframes blink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0; }
-        }
+/* ---------- sections ---------- */
+section.block { padding-block: clamp(56px, 8vw, 96px) 0; }
+.sec-head { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 18px; align-items: end; margin-bottom: 28px; }
+.sec-head h2 { font-family: var(--f-display); font-weight: 800; font-size: var(--step-3); text-transform: uppercase; line-height: 0.92; margin-top: 10px; }
+.sec-head p.note { color: var(--muted); margin: 10px 0 0; max-width: 58ch; }
 
-        .buttons {
-            margin-top: 30px;
-            display: flex;
-            flex-direction: column; /* Stack buttons on mobile */
-            align-items: center;
-            gap: 15px;
-        }
+/* lens */
+.lens { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.lens .lbl { margin-right: 4px; }
+.lens button {
+  font-family: var(--f-mono); font-size: 0.74rem; letter-spacing: 0.04em; cursor: pointer;
+  border: 1px solid var(--rule); background: var(--sheet); color: var(--muted);
+  padding: 6px 11px; border-radius: 999px;
+}
+.lens button:hover { color: var(--ink); border-color: var(--ink); }
+.lens button[aria-pressed="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+[data-tags] { transition: opacity .2s ease, filter .2s ease; }
+main[data-lens="program"] [data-tags]:not([data-tags~="program"]),
+main[data-lens="engineering"] [data-tags]:not([data-tags~="engineering"]),
+main[data-lens="ai"] [data-tags]:not([data-tags~="ai"]) { opacity: 0.28; filter: grayscale(1); }
 
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            padding: 12px 25px;
-            background: transparent;
-            color: var(--primary-text);
-            text-decoration: none;
-            border-radius: 8px;
-            transition: background-color 0.3s, box-shadow 0.3s, transform 0.2s;
-            border: 1px solid var(--border-color);
-            font-size: 1em;
-            font-weight: 400;
-            width: 100%; /* Make buttons full-width on mobile */
-            justify-content: center;
-        }
+/* ---------- now building ---------- */
+.now-grid { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: 18px; }
+.card {
+  background: var(--sheet); border: 1px solid var(--rule); border-radius: var(--radius);
+  padding: clamp(20px, 3vw, 28px); display: flex; flex-direction: column; gap: 12px; min-width: 0;
+}
+.card h3 { font-family: var(--f-display); font-weight: 800; font-size: var(--step-2); text-transform: uppercase; line-height: 0.95; }
+.card p { margin: 0; }
+.card .meta { display: flex; flex-wrap: wrap; gap: 6px 14px; color: var(--muted); }
+.card .links { margin-top: auto; padding-top: 6px; display: flex; flex-wrap: wrap; gap: 14px; }
+.card .links a { font-weight: 700; text-decoration-thickness: 1.5px; text-underline-offset: 4px; text-decoration-color: var(--accent); }
+.card .links a:hover { color: var(--accent); }
+.feature { border: 1.5px solid var(--ink); box-shadow: 6px 6px 0 var(--accent); }
+.feature-body { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 22px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { border: 1px solid var(--rule); border-radius: 4px; padding: 6px 10px; line-height: 1.25; }
+.chip b { display: block; font-family: var(--f-display); font-size: 1.5rem; font-weight: 800; font-variant-numeric: tabular-nums; }
+.chip span { font-size: 0.8rem; color: var(--muted); }
+.term {
+  background: var(--ink); color: var(--paper); border-radius: var(--radius); padding: 14px 16px;
+  font-family: var(--f-mono); font-size: 0.78rem; line-height: 1.7; overflow-x: auto; min-width: 0;
+}
+.term .dim { opacity: .6; }
+.term .add { color: color-mix(in srgb, var(--accent) 55%, var(--paper)); }
+.term ul { list-style: none; margin: 6px 0 0; padding: 0; }
+.term li::before { content: "+ "; }
+.side { display: grid; gap: 18px; }
 
-        .btn:hover {
-            background-color: rgba(0, 229, 255, 0.1);
-            border-color: var(--accent-glow);
-            box-shadow: 0 0 20px rgba(0, 229, 255, 0.5);
-            transform: translateY(-4px);
-        }
+/* ---------- gantt ---------- */
+.gantt { background: var(--sheet); border: 1.5px solid var(--ink); border-radius: var(--radius); padding: 18px clamp(14px, 2.4vw, 24px) 10px; }
+.g-legend { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-bottom: 14px; color: var(--muted); }
+.g-legend i { display: inline-block; width: 18px; height: 9px; border-radius: 2px; vertical-align: middle; margin-right: 7px; }
+.k-prog { background: var(--accent); }
+.k-eng { background: repeating-linear-gradient(135deg, var(--ink) 0 3px, transparent 3px 6px); border: 1px solid var(--ink); }
+.k-found { background: transparent; border: 1.5px solid var(--signal); }
+.g-legend .dia { color: var(--signal); margin-right: 6px; }
+.g-row { display: grid; grid-template-columns: 270px minmax(0, 1fr); gap: 16px; align-items: center; padding: 9px 0; border-top: 1px solid var(--rule); }
+.g-row.axis { border-top: 0; padding: 0 0 6px; }
+.g-label { min-width: 0; line-height: 1.3; }
+.g-label b { display: block; font-size: 0.92rem; }
+.g-label span { display: block; color: var(--muted); font-size: 0.8rem; }
+.g-label .imp { color: var(--signal); font-family: var(--f-mono); font-size: 0.72rem; margin-top: 2px; }
+.track { position: relative; height: 22px; }
+.track::before { content: ""; position: absolute; inset: 50% 0 auto; border-top: 1px dotted var(--rule); }
+.seg {
+  position: absolute; top: 3px; height: 16px; left: var(--s); width: calc(var(--e) - var(--s)); min-width: 6px;
+  border-radius: 3px; background: var(--accent);
+}
+.seg.eng { background: repeating-linear-gradient(135deg, var(--ink) 0 3px, var(--sheet) 3px 6px); border: 1px solid var(--ink); }
+.seg.found { background: var(--signal-soft); border: 1.5px solid var(--signal); }
+.seg.live::after {
+  content: ""; position: absolute; right: -5px; top: 50%; width: 8px; height: 8px; margin-top: -4px;
+  border-radius: 50%; background: var(--signal); box-shadow: 0 0 0 3px var(--signal-soft);
+  animation: blip 2.2s ease-in-out infinite;
+}
+.ms {
+  position: absolute; top: 4px; left: var(--m); width: 13px; height: 13px; margin-left: -6.5px;
+  background: var(--signal); transform: rotate(45deg); border: 2px solid var(--sheet); border-radius: 1px;
+}
+.ticks { position: relative; height: 18px; font-family: var(--f-mono); font-size: 0.68rem; color: var(--muted); }
+.ticks span { position: absolute; left: var(--t); transform: translateX(-50%); }
+.ticks span.now { color: var(--signal); font-weight: 700; }
+.ticks span.mid { }
+.g-row:not(.axis):hover { background: var(--accent-soft); }
+.nowline { position: absolute; top: 0; bottom: 0; left: 98.7%; border-left: 1.5px dashed var(--signal); pointer-events: none; }
+.g-body { position: relative; }
+.g-scrub { position: absolute; top: 0; bottom: 0; left: calc(270px + 16px); right: 0; pointer-events: none; }
 
-        .btn svg {
-            width: 22px;
-            height: 22px;
-            fill: currentColor;
-        }
+/* ---------- track record ---------- */
+.rec-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.rec .where { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; align-items: baseline; }
+.rec .big { font-family: var(--f-display); font-weight: 800; font-size: var(--step-3); line-height: 0.9; color: var(--accent); font-variant-numeric: tabular-nums; }
+.rec .big small { display: block; font-family: var(--f-body); font-size: 0.85rem; font-weight: 700; color: var(--ink); margin-top: 6px; letter-spacing: 0; }
+.rec ul { margin: 0; padding-left: 18px; }
+.rec li { margin: 4px 0; }
+.rec li::marker { color: var(--accent); }
+.stack { color: var(--muted); }
 
-        /* Media Query for larger screens */
-        @media (min-width: 768px) {
-            .container {
-                padding: 40px;
-            }
+/* ---------- principles ---------- */
+.princ { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border: 1.5px solid var(--ink); border-radius: var(--radius); background: var(--sheet); }
+.pr { padding: 22px 20px 24px; border-left: 1px solid var(--rule); display: flex; flex-direction: column; gap: 10px; }
+.pr:first-child { border-left: 0; }
+.pr h3 { font-family: var(--f-display); font-weight: 800; font-size: 1.55rem; text-transform: uppercase; line-height: 0.95; }
+.pr .n { font-family: var(--f-mono); font-size: 0.72rem; color: var(--signal); letter-spacing: 0.1em; }
+.pr p { margin: 0; color: var(--muted); font-size: 0.95rem; }
 
-            .profile-img {
-                width: 150px;
-                height: 150px;
-            }
+/* ---------- writing + creds ---------- */
+.two { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 18px; }
+.links-list { list-style: none; margin: 0; padding: 0; border-top: 1.5px solid var(--ink); }
+.links-list a {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 14px; align-items: center;
+  padding: 18px 4px; border-bottom: 1px solid var(--rule); text-decoration: none;
+}
+.links-list a:hover { background: var(--accent-soft); }
+.links-list b { font-family: var(--f-display); font-size: 1.6rem; font-weight: 800; text-transform: uppercase; line-height: 1; display: block; }
+.links-list span.d { display: block; color: var(--muted); font-size: 0.88rem; margin-top: 4px; }
+.links-list .arrow { font-family: var(--f-mono); color: var(--accent); }
+.creds dl { margin: 0; display: grid; gap: 14px; }
+.creds dt { font-family: var(--f-mono); font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+.creds dd { margin: 4px 0 0; }
+.creds dd div { padding: 3px 0; }
 
-            h1 {
-                font-size: 2.8em;
-            }
+/* ---------- contact ---------- */
+.contact { margin-top: clamp(64px, 9vw, 110px); background: var(--ink); color: var(--paper); }
+.contact .wrap { padding-block: clamp(48px, 7vw, 84px); display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 28px; align-items: end; }
+.contact h2 { font-family: var(--f-display); font-weight: 800; font-size: var(--step-3); text-transform: uppercase; line-height: 0.92; }
+.contact h2 em { font-style: normal; color: var(--signal); }
+.contact p { color: color-mix(in srgb, var(--paper) 72%, var(--ink)); margin: 14px 0 0; max-width: 46ch; }
+.contact .cta { justify-content: flex-start; }
+.contact .btn { border-color: var(--paper); }
+.contact .btn.primary { background: var(--paper); color: var(--ink); }
+.contact .btn.primary:hover { background: var(--signal); border-color: var(--signal); color: var(--ink); }
+.contact .btn.ghost { color: var(--paper); }
+.contact .btn.ghost:hover { background: var(--paper); color: var(--ink); }
+footer.fine { background: var(--ink); color: color-mix(in srgb, var(--paper) 55%, var(--ink)); border-top: 1px solid color-mix(in srgb, var(--paper) 15%, var(--ink)); }
+footer.fine .wrap { padding-block: 16px calc(16px + env(safe-area-inset-bottom, 0px)); display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
 
-            .intro-text {
-                font-size: 1.2em;
-                min-height: 30px;
-            }
-
-            .buttons {
-                flex-direction: row; /* Buttons in a row on larger screens */
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            .btn {
-                width: auto; /* Buttons take up their content width on larger screens */
-            }
-        }
-    </style>
+/* ---------- responsive ---------- */
+@media (max-width: 960px) {
+  .hero-grid, .now-grid, .two, .contact .wrap { grid-template-columns: minmax(0, 1fr); }
+  .princ { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .pr:nth-child(3) { border-left: 0; }
+  .pr:nth-child(n+3) { border-top: 1px solid var(--rule); }
+  .stats .wrap { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .stat:nth-child(3) { border-left: 0; padding-left: 0; }
+  .stat:nth-child(n+3) { border-top: 1px solid var(--rule); }
+  .sec-head { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 720px) {
+  .feature-body, .rec-grid { grid-template-columns: minmax(0, 1fr); }
+  .g-row { grid-template-columns: minmax(0, 1fr); gap: 6px; }
+  .g-row.axis .g-label { display: none; }
+  .g-scrub { left: 0; }
+  .ticks span.mid { display: none; }
+  .report { box-shadow: 4px 4px 0 var(--ink); }
+  .feature { box-shadow: 4px 4px 0 var(--accent); }
+}
+@media (max-width: 520px) {
+  .princ { grid-template-columns: minmax(0, 1fr); }
+  .pr { border-left: 0; }
+  .pr:nth-child(n+2) { border-top: 1px solid var(--rule); }
+  .stat b { font-size: 2.3rem; }
+}
+</style>
 </head>
 <body>
-    <canvas id="gradient-canvas" data-transition-in></canvas>
-    <div class="container" id="portfolio-card">
-        <img src="Abraham.png" alt="Abraham Tejada Profile" class="profile-img">
-        <h1>Abraham Tejada</h1>
-        <p id="typewriter" class="intro-text"></p>
-        <div class="buttons">
-            <a href="https://github.com/abrahamteja" class="btn" target="_blank" rel="noopener noreferrer">
-                <svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                GitHub
-            </a>
-            <a href="https://myproductivity.substack.com" class="btn" target="_blank" rel="noopener noreferrer">
-                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>
-                Productivity Substack
-            </a>
-            <a href="https://myproductivity.guru/" class="btn" target="_blank" rel="noopener noreferrer">
-                <svg viewBox="0 0 24 24"><path d="M3.5 18.49l6-6.01 4 4L22 6.92l-1.41-1.41-7.09 7.09-4-4L2 17.08z"/></svg>
-                Productivity Blog
-            </a>
-            <a href="https://www.linkedin.com/in/abraham-tejada-pmp/" class="btn" target="_blank" rel="noopener noreferrer">
-                <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                LinkedIn
-            </a>
-            <a href="https://thepmtech.substack.com/" class="btn" target="_blank" rel="noopener noreferrer">
-                <svg viewBox="0 0 24 24"><path d="M19.5 5.5c-1.11 0-2 .9-2 2v2h-1.5c-1.11 0-2 .9-2 2v2h-1.5c-1.11 0-2 .9-2 2v3.5h7v-3.5c0-1.1-.9-2-2-2h-1.5v-2c0-1.1-.9-2-2-2h-1.5v-2c0-1.1-.9-2-2-2h-3.5v-7h3.5c1.1 0 2 .9 2 2v1.5h2c1.1 0 2 .9 2 2v1.5h2c1.1 0 2 .9 2 2v1.5h3.5v-7h-3.5z"/></svg>
-                Tech Blog
-            </a>
+<a class="skip" href="#work">Skip to work</a>
+
+<header class="bar">
+  <div class="wrap">
+    <a class="mark" href="#top" aria-label="Abraham Tejada, back to top">AT</a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#work">Work</a>
+      <a href="#timeline">Timeline</a>
+      <a class="opt" href="#principles">Principles</a>
+      <a class="opt" href="#writing">Writing</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="theme-btn" id="theme-toggle" type="button" aria-label="Switch light or dark theme">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 1 0 0 20V2z"/><circle cx="12" cy="12" r="9.2" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="top" data-lens="all">
+
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">Technical Program Manager &nbsp;/&nbsp; Software Engineer &nbsp;/&nbsp; AI</p>
+        <h1>Abraham <span class="ln2">Tejada</span></h1>
+        <p class="lede">I take <strong>AI and platform programs</strong> from plan to production, and I write the code too.</p>
+        <p class="sub">17+ years leading programs at Warner Bros. Discovery, Meta, Barclaycard and Verizon. Today I build pricing tools as a Senior Software Engineer, maintain an open-source LLM eval framework, and run the technology at Tesan AI, which I co-founded.</p>
+        <div class="cta">
+          <a class="btn primary" href="#work">See the work</a>
+          <a class="btn ghost" href="https://www.linkedin.com/in/abraham-tejada-pmp/" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            LinkedIn
+          </a>
+          <a class="btn ghost" href="https://github.com/abrahamteja" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            GitHub
+          </a>
         </div>
+      </div>
+
+      <aside class="report" aria-label="Status report">
+        <div class="report-head">
+          <img class="avatar" src="Abraham.png" alt="Illustrated portrait of Abraham Tejada" width="64" height="64">
+          <div>
+            <h2>Status report</h2>
+            <p class="mono">Abraham Tejada &middot; New York metro</p>
+          </div>
+        </div>
+        <ul>
+          <li><div class="what">Evalrite<span>Open-source LLM evals, maintainer</span></div><span class="pill">Active</span></li>
+          <li><div class="what">Tesan AI<span>Co-founder, technical lead</span></div><span class="pill">Active</span></li>
+          <li><div class="what">Next role<span>TPM, forward deployed or AI product</span></div><span class="pill open">Open</span></li>
+        </ul>
+        <p class="report-foot mono">PMP &middot; AWS Solutions Architect &middot; MBA, Stevens</p>
+      </aside>
     </div>
+  </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/gradient-animator@1.1.2/dist/Gradient.min.js"></script>
-    <script>
-        // Initialize the gradient background animation
-        const gradient = new Gradient();
-        gradient.initGradient("#gradient-canvas");
+  <div class="stats" role="list" aria-label="By the numbers">
+    <div class="wrap">
+      <div class="stat" role="listitem"><b>17<em>+</em></b><span>years leading technical programs and platforms</span></div>
+      <div class="stat" role="listitem"><b>$250M<em>+</em></b><span>in combined savings and EBITDA impact I contributed to</span></div>
+      <div class="stat" role="listitem"><b>&minus;25<em>%</em></b><span>model deployment cycle time on an AI/ML platform</span></div>
+      <div class="stat" role="listitem"><b>19</b><span>upstream fixes brought into Evalrite</span></div>
+    </div>
+  </div>
 
-        // Typewriter effect
-        const textToType = "Welcome to my portfolio! Explore my work and productivity insights.";
-        const typewriterElement = document.getElementById('typewriter');
-        let i = 0;
+  <section class="block" id="work">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow">In flight</p>
+          <h2>Now building</h2>
+        </div>
+        <div class="lens" role="group" aria-label="Highlight work by type">
+          <span class="eyebrow lbl">Lens</span>
+          <button type="button" id="lens-all" data-lens="all" aria-pressed="true">All</button>
+          <button type="button" id="lens-program" data-lens="program" aria-pressed="false">Program</button>
+          <button type="button" id="lens-engineering" data-lens="engineering" aria-pressed="false">Engineering</button>
+          <button type="button" id="lens-ai" data-lens="ai" aria-pressed="false">AI/ML</button>
+        </div>
+      </div>
 
-        function typeWriter() {
-            if (i < textToType.length) {
-                typewriterElement.innerHTML = textToType.substring(0, i + 1) + '<span class="typewriter-cursor"></span>';
-                i++;
-                setTimeout(typeWriter, 55);
-            } else {
-                // Remove cursor after typing is complete
-                typewriterElement.innerHTML = textToType;
-            }
-        }
+      <div class="now-grid">
+        <article class="card feature" data-tags="engineering ai">
+          <div class="meta mono"><span>Open source</span><span>2026</span><span>Python</span></div>
+          <h3>Evalrite</h3>
+          <div class="feature-body">
+            <div style="display:flex;flex-direction:column;gap:14px;min-width:0">
+              <p>A maintained fork of OpenAI Evals, the open framework for testing large language models. Upstream had a backlog of open fixes that weren't landing. I triaged it, brought 19 of them in with each author's credit, and grew the test suite to match.</p>
+              <div class="chips">
+                <div class="chip"><b>19</b><span>upstream fixes merged</span></div>
+                <div class="chip"><b>105&rarr;193</b><span>tests in the suite</span></div>
+              </div>
+            </div>
+            <div class="term" aria-label="Excerpt from the Evalrite changelog">
+              <div class="dim">CHANGELOG.md &middot; Unreleased &middot; Fixed</div>
+              <ul class="add">
+                <li>Handle zero denominators in precision, recall and F-score</li>
+                <li>Stop registry alias cycles hanging resolution</li>
+                <li>Count matching JSON nulls as correct in JsonMatch</li>
+                <li>Cap API retries and drop dead error checks</li>
+                <li>Restore recorder context after exceptions</li>
+              </ul>
+              <div class="dim" style="margin-top:6px">&hellip; 14 more</div>
+            </div>
+          </div>
+          <div class="links"><a href="https://github.com/abrahamteja/evalsrite" target="_blank" rel="noopener noreferrer">View on GitHub &rarr;</a></div>
+        </article>
 
-        // 3D tilt effect for the card
-        const card = document.getElementById('portfolio-card');
+        <div class="side">
+          <article class="card" data-tags="engineering ai program">
+            <div class="meta mono"><span>Co-founder</span><span>2026</span></div>
+            <h3>Tesan AI</h3>
+            <p>AI software and automation workflows for law firms and small businesses. I lead platform architecture, client implementations and infrastructure: a multi-tenant platform with per-firm isolation, built on Next.js, Supabase and Vercel.</p>
+            <div class="links"><a href="https://tesanai.com" target="_blank" rel="noopener noreferrer">tesanai.com &rarr;</a></div>
+          </article>
+          <article class="card" data-tags="program ai">
+            <div class="meta mono"><span>Teaching</span><span>2026</span></div>
+            <h3>Tediso</h3>
+            <p>Technology CLE training for attorneys, built to help law firms put new tools to work.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        // Disable tilt effect on touch devices
-        const isTouchDevice = () => {
-            return 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-        }
+  <section class="block" id="timeline">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow">2008 &rarr; today</p>
+          <h2>The critical path</h2>
+          <p class="note">Every role on one plan. Diamonds mark measured results.</p>
+        </div>
+      </div>
 
-        if (!isTouchDevice()) {
-            const tiltEffect = (e) => {
-                const { offsetWidth: width, offsetHeight: height } = card;
-                let { clientX: x, clientY: y } = e;
+      <div class="gantt">
+        <div class="g-legend mono">
+          <span><i class="k-prog"></i>Program leadership</span>
+          <span><i class="k-eng"></i>Engineering</span>
+          <span><i class="k-found"></i>Founder</span>
+          <span><span class="dia">&#9670;</span>Milestone</span>
+        </div>
+        <div class="g-body">
+          <div class="g-row axis" aria-hidden="true">
+            <div class="g-label"></div>
+            <div class="ticks">
+              <span style="--t:0%;transform:none">2008</span>
+              <span class="mid" style="--t:15.79%">2011</span>
+              <span style="--t:31.58%">2014</span>
+              <span class="mid" style="--t:47.37%">2017</span>
+              <span style="--t:63.16%">2020</span>
+              <span class="mid" style="--t:78.95%">2023</span>
+              <span class="now" style="--t:98.7%;transform:translateX(-100%)">Now</span>
+            </div>
+          </div>
 
-                const rect = card.getBoundingClientRect();
-                x = x - rect.left;
-                y = y - rect.top;
+          <div class="g-row" data-tags="engineering ai">
+            <div class="g-label"><b>Evalrite</b><span>Maintainer &middot; 2026</span></div>
+            <div class="track"><span class="ms" style="--m:98.2%"></span></div>
+          </div>
+          <div class="g-row" data-tags="engineering ai program">
+            <div class="g-label"><b>Tesan AI</b><span>Co-founder, technical lead &middot; 2026&ndash;now</span></div>
+            <div class="track"><span class="seg found live" style="--s:96.05%;--e:98.7%"></span></div>
+          </div>
+          <div class="g-row" data-tags="engineering ai">
+            <div class="g-label"><b>Warner Bros. Discovery</b><span>Senior Software Engineer &middot; 2025&ndash;now</span><span class="imp">&#9670; Pricing analysis: 3 days to under 4 hours</span></div>
+            <div class="track"><span class="seg eng live" style="--s:93.86%;--e:98.7%"></span></div>
+          </div>
+          <div class="g-row" data-tags="program ai">
+            <div class="g-label"><b>Warner Bros. Discovery</b><span>Staff TPM, AI/ML Platform &middot; 2023&ndash;2025</span><span class="imp">&#9670; Model deployment cycle &minus;25%</span></div>
+            <div class="track"><span class="seg" style="--s:80.26%;--e:93.86%"></span><span class="ms" style="--m:93.86%"></span></div>
+          </div>
+          <div class="g-row" data-tags="program">
+            <div class="g-label"><b>Meta</b><span>Infrastructure Solutions Mgr, TPM &middot; 2020&ndash;2023</span><span class="imp">&#9670; $3M saved in tooling overhead</span></div>
+            <div class="track"><span class="seg" style="--s:67.11%;--e:79.39%"></span><span class="ms" style="--m:79.39%"></span></div>
+          </div>
+          <div class="g-row" data-tags="program engineering">
+            <div class="g-label"><b>Barclaycard</b><span>Technical Delivery Lead &middot; 2019&ndash;2020</span></div>
+            <div class="track"><span class="seg" style="--s:59.21%;--e:66.67%"></span></div>
+          </div>
+          <div class="g-row" data-tags="program">
+            <div class="g-label"><b>Verizon Business Markets</b><span>Senior TPM, Digital Platform &middot; 2017&ndash;2018</span></div>
+            <div class="track"><span class="seg" style="--s:51.75%;--e:57.46%"></span></div>
+          </div>
+          <div class="g-row" data-tags="program">
+            <div class="g-label"><b>Verizon Wireless</b><span>Sr Technical Project Manager, RTE &middot; 2016&ndash;2017</span><span class="imp">&#9670; $100M in savings</span></div>
+            <div class="track"><span class="seg" style="--s:42.11%;--e:51.75%"></span><span class="ms" style="--m:51.75%"></span></div>
+          </div>
+          <div class="g-row" data-tags="program">
+            <div class="g-label"><b>Verizon Wireless</b><span>Technical Portfolio Manager &middot; 2013&ndash;2015</span><span class="imp">&#9670; $150M+ est. EBITDA savings</span></div>
+            <div class="track"><span class="seg" style="--s:28.07%;--e:41.67%"></span><span class="ms" style="--m:41.67%"></span></div>
+          </div>
+          <div class="g-row" data-tags="program">
+            <div class="g-label"><b>Verizon Wireless</b><span>IT Project Manager, Business Analyst &middot; 2008&ndash;2013</span></div>
+            <div class="track"><span class="seg" style="--s:3.07%;--e:28.07%"></span></div>
+          </div>
+          <div class="g-scrub" aria-hidden="true"><span class="nowline"></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-                const xRotation = 20 * ((y - height / 2) / height);
-                const yRotation = -20 * ((x - width / 2) / width);
-                
-                card.style.transform = `perspective(1000px) rotateX(${xRotation}deg) rotateY(${yRotation}deg)`;
-            };
+  <section class="block" id="record">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow">Delivered</p>
+          <h2>Track record</h2>
+        </div>
+      </div>
+      <div class="rec-grid">
+        <article class="card rec" data-tags="program ai">
+          <div class="where"><span class="mono">Warner Bros. Discovery &middot; Staff TPM</span></div>
+          <h3>AI/ML platform at scale</h3>
+          <div class="big">&minus;25%<small>model deployment cycle time</small></div>
+          <ul>
+            <li>Scaled MLOps with reusable micro-processes that raised data science output.</li>
+            <li>Shipped LLM translation automation and a RAG chatbot on internal docs, cutting support tickets 20%.</li>
+            <li>Delivered CDP integration across business units for a unified customer view.</li>
+            <li>Ran GenAI workshops on prompt engineering, RAG and responsible AI.</li>
+          </ul>
+        </article>
+        <article class="card rec" data-tags="engineering ai">
+          <div class="where"><span class="mono">Warner Bros. Discovery &middot; Senior SWE</span></div>
+          <h3>Pricing tools</h3>
+          <div class="big">3 days &rarr; &lt;4 hrs<small>counterfactual pricing analysis, automated</small></div>
+          <ul>
+            <li>Built regression models that forecast demand and recommend price points, 15% more accurate than before.</li>
+            <li>Built internal planning tools now used by 4 teams and 40+ people.</li>
+          </ul>
+          <p class="stack mono">Python &middot; Scala &middot; Databricks &middot; Terraform &middot; DABs</p>
+        </article>
+        <article class="card rec" data-tags="program">
+          <div class="where"><span class="mono">Meta &middot; Enterprise Engineering</span></div>
+          <h3>Observability consolidation</h3>
+          <div class="big">$3M<small>saved in third-party tooling overhead</small></div>
+          <ul>
+            <li>Moved teams onto one in-house logging, monitoring and alerting platform.</li>
+            <li>Ran the waste analysis, won buy-in across engineering, and owned budget, headcount and roadmap.</li>
+            <li>Grew the team from 2 to 6 application managers.</li>
+          </ul>
+        </article>
+        <article class="card rec" data-tags="program">
+          <div class="where"><span class="mono">Verizon &middot; Transformation</span></div>
+          <h3>Business transformation</h3>
+          <div class="big">$150M+<small>estimated EBITDA savings across DMAIC projects</small></div>
+          <ul>
+            <li>Led transformation programs that achieved $100M in savings.</li>
+            <li>Scrum Master for a paper-free program saving $40M a year.</li>
+            <li>Mentored project managers and built executive portfolio reporting.</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
 
-            const resetTilt = () => {
-                card.style.transform = `perspective(1000px) rotateX(0) rotateY(0)`;
-            };
+  <section class="block" id="principles">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow">Operating model</p>
+          <h2>How I run a program</h2>
+        </div>
+      </div>
+      <div class="princ">
+        <div class="pr" data-tags="program"><span class="n">RULE 1</span><h3>Measure before you move</h3><p>Success metrics and SLOs come first. At Meta I ranked incoming work with a value-versus-effort model built on SQL analysis of real requests.</p></div>
+        <div class="pr" data-tags="program ai"><span class="n">RULE 2</span><h3>Pave the road</h3><p>Repeatable process beats heroics. Reusable MLOps micro-processes cut model deployment cycle time by 25%.</p></div>
+        <div class="pr" data-tags="program ai"><span class="n">RULE 3</span><h3>Teach the room</h3><p>Adoption is part of delivery. I've run GenAI workshops for product and engineering teams, and I teach technology CLE to attorneys.</p></div>
+        <div class="pr" data-tags="engineering"><span class="n">RULE 4</span><h3>Write the code</h3><p>I moved into a Senior Software Engineer role in 2025 and build in Python, Scala and TypeScript, so I know what I'm asking a team for.</p></div>
+      </div>
+    </div>
+  </section>
 
-            document.addEventListener('mousemove', tiltEffect);
-            card.addEventListener('mouseleave', resetTilt);
-        }
+  <section class="block" id="writing">
+    <div class="wrap two">
+      <div>
+        <div class="sec-head"><div><p class="eyebrow">Published</p><h2>Writing</h2></div></div>
+        <ul class="links-list">
+          <li><a href="https://thepmtech.substack.com/" target="_blank" rel="noopener noreferrer"><span><b>The PM Tech</b><span class="d">Tech blog on Substack</span></span><span class="arrow">&nearr;</span></a></li>
+          <li><a href="https://myproductivity.substack.com" target="_blank" rel="noopener noreferrer"><span><b>Productivity Substack</b><span class="d">Notes on getting more done</span></span><span class="arrow">&nearr;</span></a></li>
+          <li><a href="https://myproductivity.guru/" target="_blank" rel="noopener noreferrer"><span><b>Productivity blog</b><span class="d">myproductivity.guru</span></span><span class="arrow">&nearr;</span></a></li>
+        </ul>
+      </div>
+      <div class="creds">
+        <div class="sec-head"><div><p class="eyebrow">Credentials</p><h2>Training</h2></div></div>
+        <dl>
+          <div><dt>Education</dt><dd>
+            <div>MBA, Technology Management &middot; Stevens Institute of Technology</div>
+            <div>MS, Information Systems &middot; Stevens Institute of Technology</div>
+            <div>BA, Geographic Information Systems &middot; University at Buffalo</div>
+          </dd></div>
+          <div><dt>Certifications</dt><dd>
+            <div>PMP, Project Management Institute</div>
+            <div>AWS Certified Solutions Architect, Associate</div>
+            <div>Lean Six Sigma Green Belt</div>
+          </dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
 
-        document.addEventListener('DOMContentLoaded', typeWriter);
-    </script>
+</main>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow" style="color:inherit;opacity:.7">Contact</p>
+      <h2 style="margin-top:10px">Got a program that has to <em>ship?</em></h2>
+      <p>I'm open to TPM, forward deployed engineering and AI product roles. The fastest way to reach me is LinkedIn.</p>
+    </div>
+    <div class="cta">
+      <a class="btn primary" href="https://www.linkedin.com/in/abraham-tejada-pmp/" target="_blank" rel="noopener noreferrer">Message me on LinkedIn</a>
+      <a class="btn ghost" href="https://github.com/abrahamteja" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </div>
+  </div>
+</section>
+<footer class="fine">
+  <div class="wrap mono"><span>&copy; <span id="yr">2026</span> Abraham Tejada</span><span>abraham-tejada.me</span></div>
+</footer>
+
+<script>
+(function () {
+  var root = document.documentElement;
+  var KEY = 'at-theme';
+  try { var saved = localStorage.getItem(KEY); if (saved === 'light' || saved === 'dark') root.setAttribute('data-theme', saved); } catch (e) {}
+  document.getElementById('theme-toggle').addEventListener('click', function () {
+    var cur = root.getAttribute('data-theme');
+    if (!cur) cur = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    var next = cur === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    try { localStorage.setItem(KEY, next); } catch (e) {}
+  });
+
+  var main = document.querySelector('main');
+  var buttons = document.querySelectorAll('.lens button');
+  buttons.forEach(function (b) {
+    b.addEventListener('click', function () {
+      main.setAttribute('data-lens', b.getAttribute('data-lens'));
+      buttons.forEach(function (o) { o.setAttribute('aria-pressed', o === b ? 'true' : 'false'); });
+    });
+  });
+
+  var yr = document.getElementById('yr');
+  if (yr) yr.textContent = new Date().getFullYear();
+})();
+</script>
+
 </body>
 </html>
