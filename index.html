@@ -220,7 +220,7 @@ main[data-lens="engineering"] [data-tags]:not([data-tags~="engineering"]),
 main[data-lens="ai"] [data-tags]:not([data-tags~="ai"]) { opacity: 0.28; filter: grayscale(1); }
 
 /* ---------- now building ---------- */
-.now-grid { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: 18px; }
+.now-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 18px; }
 .card {
   background: var(--sheet); border: 1px solid var(--rule); border-radius: var(--radius);
   padding: clamp(20px, 3vw, 28px); display: flex; flex-direction: column; gap: 12px; min-width: 0;
@@ -232,7 +232,7 @@ main[data-lens="ai"] [data-tags]:not([data-tags~="ai"]) { opacity: 0.28; filter:
 .card .links a { font-weight: 700; text-decoration-thickness: 1.5px; text-underline-offset: 4px; text-decoration-color: var(--accent); }
 .card .links a:hover { color: var(--accent); }
 .feature { border: 1.5px solid var(--ink); box-shadow: 6px 6px 0 var(--accent); }
-.feature-body { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 22px; }
+.feature-body { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: clamp(22px, 4vw, 48px); align-items: start; }
 .chips { display: flex; flex-wrap: wrap; gap: 8px; }
 .chip { border: 1px solid var(--rule); border-radius: 4px; padding: 6px 10px; line-height: 1.25; }
 .chip b { display: block; font-family: var(--f-display); font-size: 1.5rem; font-weight: 800; font-variant-numeric: tabular-nums; }
@@ -245,7 +245,6 @@ main[data-lens="ai"] [data-tags]:not([data-tags~="ai"]) { opacity: 0.28; filter:
 .term .add { color: color-mix(in srgb, var(--accent) 55%, var(--paper)); }
 .term ul { list-style: none; margin: 6px 0 0; padding: 0; }
 .term li::before { content: "+ "; }
-.side { display: grid; gap: 18px; }
 
 /* ---------- gantt ---------- */
 .gantt { background: var(--sheet); border: 1.5px solid var(--ink); border-radius: var(--radius); padding: 18px clamp(14px, 2.4vw, 24px) 10px; }
@@ -253,7 +252,6 @@ main[data-lens="ai"] [data-tags]:not([data-tags~="ai"]) { opacity: 0.28; filter:
 .g-legend i { display: inline-block; width: 18px; height: 9px; border-radius: 2px; vertical-align: middle; margin-right: 7px; }
 .k-prog { background: var(--accent); }
 .k-eng { background: repeating-linear-gradient(135deg, var(--ink) 0 3px, transparent 3px 6px); border: 1px solid var(--ink); }
-.k-found { background: transparent; border: 1.5px solid var(--signal); }
 .g-legend .dia { color: var(--signal); margin-right: 6px; }
 .g-row { display: grid; grid-template-columns: 270px minmax(0, 1fr); gap: 16px; align-items: center; padding: 9px 0; border-top: 1px solid var(--rule); }
 .g-row.axis { border-top: 0; padding: 0 0 6px; }
@@ -268,7 +266,6 @@ main[data-lens="ai"] [data-tags]:not([data-tags~="ai"]) { opacity: 0.28; filter:
   border-radius: 3px; background: var(--accent);
 }
 .seg.eng { background: repeating-linear-gradient(135deg, var(--ink) 0 3px, var(--sheet) 3px 6px); border: 1px solid var(--ink); }
-.seg.found { background: var(--signal-soft); border: 1.5px solid var(--signal); }
 .seg.live::after {
   content: ""; position: absolute; right: -5px; top: 50%; width: 8px; height: 8px; margin-top: -4px;
   border-radius: 50%; background: var(--signal); box-shadow: 0 0 0 3px var(--signal-soft);
@@ -338,7 +335,7 @@ footer.fine .wrap { padding-block: 16px calc(16px + env(safe-area-inset-bottom, 
 
 /* ---------- responsive ---------- */
 @media (max-width: 960px) {
-  .hero-grid, .now-grid, .two, .contact .wrap { grid-template-columns: minmax(0, 1fr); }
+  .hero-grid, .two, .contact .wrap { grid-template-columns: minmax(0, 1fr); }
   .princ { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .pr:nth-child(3) { border-left: 0; }
   .pr:nth-child(n+3) { border-top: 1px solid var(--rule); }
@@ -391,7 +388,7 @@ footer.fine .wrap { padding-block: 16px calc(16px + env(safe-area-inset-bottom, 
         <p class="eyebrow">Technical Program Manager &nbsp;/&nbsp; Software Engineer &nbsp;/&nbsp; AI</p>
         <h1>Abraham <span class="ln2">Tejada</span></h1>
         <p class="lede">I take <strong>AI and platform programs</strong> from plan to production, and I write the code too.</p>
-        <p class="sub">17+ years leading programs at Warner Bros. Discovery, Meta, Barclaycard and Verizon. Today I build pricing tools as a Senior Software Engineer, maintain an open-source LLM eval framework, and run the technology at Tesan AI, which I co-founded.</p>
+        <p class="sub">17+ years leading programs at Warner Bros. Discovery, Meta, Barclaycard and Verizon. Today I build pricing tools with regression models as a Senior Software Engineer, and I maintain an open-source framework for evaluating LLMs.</p>
         <div class="cta">
           <a class="btn primary" href="#work">See the work</a>
           <a class="btn ghost" href="https://www.linkedin.com/in/abraham-tejada-pmp/" target="_blank" rel="noopener noreferrer">
@@ -415,7 +412,6 @@ footer.fine .wrap { padding-block: 16px calc(16px + env(safe-area-inset-bottom, 
         </div>
         <ul>
           <li><div class="what">Evalrite<span>Open-source LLM evals, maintainer</span></div><span class="pill">Active</span></li>
-          <li><div class="what">Tesan AI<span>Co-founder, technical lead</span></div><span class="pill">Active</span></li>
           <li><div class="what">Next role<span>TPM, forward deployed or AI product</span></div><span class="pill open">Open</span></li>
         </ul>
         <p class="report-foot mono">PMP &middot; AWS Solutions Architect &middot; MBA, Stevens</p>
@@ -436,7 +432,7 @@ footer.fine .wrap { padding-block: 16px calc(16px + env(safe-area-inset-bottom, 
     <div class="wrap">
       <div class="sec-head">
         <div>
-          <p class="eyebrow">In flight</p>
+          <p class="eyebrow">Featured project</p>
           <h2>Now building</h2>
         </div>
         <div class="lens" role="group" aria-label="Highlight work by type">
@@ -474,20 +470,6 @@ footer.fine .wrap { padding-block: 16px calc(16px + env(safe-area-inset-bottom, 
           </div>
           <div class="links"><a href="https://github.com/abrahamteja/evalsrite" target="_blank" rel="noopener noreferrer">View on GitHub &rarr;</a></div>
         </article>
-
-        <div class="side">
-          <article class="card" data-tags="engineering ai program">
-            <div class="meta mono"><span>Co-founder</span><span>2026</span></div>
-            <h3>Tesan AI</h3>
-            <p>AI software and automation workflows for law firms and small businesses. I lead platform architecture, client implementations and infrastructure: a multi-tenant platform with per-firm isolation, built on Next.js, Supabase and Vercel.</p>
-            <div class="links"><a href="https://tesanai.com" target="_blank" rel="noopener noreferrer">tesanai.com &rarr;</a></div>
-          </article>
-          <article class="card" data-tags="program ai">
-            <div class="meta mono"><span>Teaching</span><span>2026</span></div>
-            <h3>Tediso</h3>
-            <p>Technology CLE training for attorneys, built to help law firms put new tools to work.</p>
-          </article>
-        </div>
       </div>
     </div>
   </section>
@@ -506,7 +488,6 @@ footer.fine .wrap { padding-block: 16px calc(16px + env(safe-area-inset-bottom, 
         <div class="g-legend mono">
           <span><i class="k-prog"></i>Program leadership</span>
           <span><i class="k-eng"></i>Engineering</span>
-          <span><i class="k-found"></i>Founder</span>
           <span><span class="dia">&#9670;</span>Milestone</span>
         </div>
         <div class="g-body">
@@ -526,10 +507,6 @@ footer.fine .wrap { padding-block: 16px calc(16px + env(safe-area-inset-bottom, 
           <div class="g-row" data-tags="engineering ai">
             <div class="g-label"><b>Evalrite</b><span>Maintainer &middot; 2026</span></div>
             <div class="track"><span class="ms" style="--m:98.2%"></span></div>
-          </div>
-          <div class="g-row" data-tags="engineering ai program">
-            <div class="g-label"><b>Tesan AI</b><span>Co-founder, technical lead &middot; 2026&ndash;now</span></div>
-            <div class="track"><span class="seg found live" style="--s:96.05%;--e:98.7%"></span></div>
           </div>
           <div class="g-row" data-tags="engineering ai">
             <div class="g-label"><b>Warner Bros. Discovery</b><span>Senior Software Engineer &middot; 2025&ndash;now</span><span class="imp">&#9670; Pricing analysis: 3 days to under 4 hours</span></div>
@@ -634,7 +611,7 @@ footer.fine .wrap { padding-block: 16px calc(16px + env(safe-area-inset-bottom, 
       <div class="princ">
         <div class="pr" data-tags="program"><span class="n">RULE 1</span><h3>Measure before you move</h3><p>Success metrics and SLOs come first. At Meta I ranked incoming work with a value-versus-effort model built on SQL analysis of real requests.</p></div>
         <div class="pr" data-tags="program ai"><span class="n">RULE 2</span><h3>Pave the road</h3><p>Repeatable process beats heroics. Reusable MLOps micro-processes cut model deployment cycle time by 25%.</p></div>
-        <div class="pr" data-tags="program ai"><span class="n">RULE 3</span><h3>Teach the room</h3><p>Adoption is part of delivery. I've run GenAI workshops for product and engineering teams, and I teach technology CLE to attorneys.</p></div>
+        <div class="pr" data-tags="program ai"><span class="n">RULE 3</span><h3>Teach the room</h3><p>Adoption is part of delivery. I've run hands-on GenAI demos, workshops and enablement sessions for product and engineering teams.</p></div>
         <div class="pr" data-tags="engineering"><span class="n">RULE 4</span><h3>Write the code</h3><p>I moved into a Senior Software Engineer role in 2025 and build in Python, Scala and TypeScript, so I know what I'm asking a team for.</p></div>
       </div>
     </div>
