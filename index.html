@@ -294,6 +294,35 @@ main[data-lens="ai"] [data-tags]:not([data-tags~="ai"]) { opacity: 0.28; filter:
 .rec li::marker { color: var(--accent); }
 .stack { color: var(--muted); }
 
+/* ---------- selected programs ---------- */
+.ledger { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: clamp(24px, 4vw, 48px); border-top: 1.5px solid var(--ink); }
+.prj { display: grid; grid-template-columns: 4.2rem minmax(0, 1fr); gap: 14px; padding: 18px 0 20px; border-bottom: 1px solid var(--rule); }
+.prj .yr { font-family: var(--f-display); font-weight: 800; font-size: 1.9rem; line-height: 0.9; color: var(--accent); font-variant-numeric: tabular-nums; }
+.prj h3 { font-size: 1.05rem; line-height: 1.3; }
+.prj .org { display: block; color: var(--muted); margin-top: 3px; }
+.prj p { margin: 8px 0 0; font-size: 0.95rem; }
+.pj { position: absolute; top: 6px; left: var(--m); width: 10px; height: 10px; margin-left: -5px; border-radius: 50%; background: var(--sheet); border: 2px solid var(--ink); }
+.g-legend .pjk { display: inline-block; width: 9px; height: 9px; border-radius: 50%; border: 2px solid var(--ink); margin-right: 7px; vertical-align: middle; }
+@media (max-width: 720px) { .ledger { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- security track ---------- */
+.sec-track { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 18px; position: relative; }
+.sec-track::before { content: ""; position: absolute; left: 0; right: 0; top: 7px; border-top: 1.5px solid var(--ink); }
+.st { position: relative; padding-top: 30px; display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.st .node { position: absolute; top: 0; left: 0; width: 15px; height: 15px; border-radius: 50%; background: var(--accent); border: 3px solid var(--paper); box-shadow: 0 0 0 1.5px var(--ink); }
+.st.target .node { background: var(--signal); }
+.st .when { color: var(--accent); font-weight: 700; }
+.st.target .when { color: var(--signal); }
+.st h3 { font-family: var(--f-display); font-weight: 800; font-size: 1.45rem; text-transform: uppercase; line-height: 0.95; }
+.st .org { color: var(--muted); }
+.st p { margin: 2px 0 0; font-size: 0.93rem; }
+.st .pill { align-self: flex-start; margin-top: 4px; }
+@media (max-width: 960px) {
+  .sec-track { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .sec-track::before { top: 0; bottom: 0; left: 7px; right: auto; border-top: 0; border-left: 1.5px solid var(--ink); }
+  .st { padding: 0 0 24px 34px; }
+}
+
 /* ---------- principles ---------- */
 .princ { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border: 1.5px solid var(--ink); border-radius: var(--radius); background: var(--sheet); }
 .pr { padding: 22px 20px 24px; border-left: 1px solid var(--rule); display: flex; flex-direction: column; gap: 10px; }
@@ -370,6 +399,8 @@ footer.fine .wrap { padding-block: 16px calc(16px + env(safe-area-inset-bottom, 
     <nav class="nav" aria-label="Sections">
       <a href="#work">Work</a>
       <a href="#timeline">Timeline</a>
+      <a class="opt" href="#programs">Programs</a>
+      <a class="opt" href="#security">Security</a>
       <a class="opt" href="#principles">Principles</a>
       <a class="opt" href="#writing">Writing</a>
       <a href="#contact">Contact</a>
@@ -412,6 +443,7 @@ footer.fine .wrap { padding-block: 16px calc(16px + env(safe-area-inset-bottom, 
         </div>
         <ul>
           <li><div class="what">Evalrite<span>Open-source LLM evals, maintainer</span></div><span class="pill">Active</span></li>
+          <li><div class="what">CISSP<span>Exam prep, targeting February 2027</span></div><span class="pill open">In progress</span></li>
           <li><div class="what">Next role<span>TPM, forward deployed or AI product</span></div><span class="pill open">Open</span></li>
         </ul>
         <p class="report-foot mono">PMP &middot; AWS Solutions Architect &middot; MBA, Stevens</p>
@@ -489,6 +521,7 @@ footer.fine .wrap { padding-block: 16px calc(16px + env(safe-area-inset-bottom, 
           <span><i class="k-prog"></i>Program leadership</span>
           <span><i class="k-eng"></i>Engineering</span>
           <span><span class="dia">&#9670;</span>Milestone</span>
+          <span><i class="pjk"></i>Selected program</span>
         </div>
         <div class="g-body">
           <div class="g-row axis" aria-hidden="true">
@@ -514,23 +547,23 @@ footer.fine .wrap { padding-block: 16px calc(16px + env(safe-area-inset-bottom, 
           </div>
           <div class="g-row" data-tags="program ai">
             <div class="g-label"><b>Warner Bros. Discovery</b><span>Staff TPM, AI/ML Platform &middot; 2023&ndash;2025</span><span class="imp">&#9670; Model deployment cycle &minus;25%</span></div>
-            <div class="track"><span class="seg" style="--s:80.26%;--e:93.86%"></span><span class="ms" style="--m:93.86%"></span></div>
+            <div class="track"><span class="seg" style="--s:80.26%;--e:93.86%"></span><span class="ms" style="--m:93.86%"></span><span class="pj" style="--m:81.58%" title="Customer Data Platform Integration, 2023" role="img" aria-label="Selected program: Customer Data Platform Integration, 2023"></span><span class="pj" style="--m:86.84%" title="Customer Retention &amp; Personalization Models, 2024" role="img" aria-label="Selected program: Customer Retention &amp; Personalization Models, 2024"></span><span class="pj" style="--m:92.11%" title="AI-Powered Translation &amp; Chatbot, 2025" role="img" aria-label="Selected program: AI-Powered Translation &amp; Chatbot, 2025"></span></div>
           </div>
           <div class="g-row" data-tags="program">
             <div class="g-label"><b>Meta</b><span>Infrastructure Solutions Mgr, TPM &middot; 2020&ndash;2023</span><span class="imp">&#9670; $3M saved in tooling overhead</span></div>
-            <div class="track"><span class="seg" style="--s:67.11%;--e:79.39%"></span><span class="ms" style="--m:79.39%"></span></div>
+            <div class="track"><span class="seg" style="--s:67.11%;--e:79.39%"></span><span class="ms" style="--m:79.39%"></span><span class="pj" style="--m:71.05%" title="On-Premise Logging &amp; Monitoring Migration, 2021" role="img" aria-label="Selected program: On-Premise Logging &amp; Monitoring Migration, 2021"></span><span class="pj" style="--m:76.32%" title="App Prioritization Framework, 2022" role="img" aria-label="Selected program: App Prioritization Framework, 2022"></span></div>
           </div>
           <div class="g-row" data-tags="program engineering">
             <div class="g-label"><b>Barclaycard</b><span>Technical Delivery Lead &middot; 2019&ndash;2020</span></div>
-            <div class="track"><span class="seg" style="--s:59.21%;--e:66.67%"></span></div>
+            <div class="track"><span class="seg" style="--s:59.21%;--e:66.67%"></span><span class="pj" style="--m:60.53%" title="Microservices Migration to Cloud, 2019" role="img" aria-label="Selected program: Microservices Migration to Cloud, 2019"></span><span class="pj" style="--m:65.79%" title="API Platform for Third-Party Engagement, 2020" role="img" aria-label="Selected program: API Platform for Third-Party Engagement, 2020"></span></div>
           </div>
           <div class="g-row" data-tags="program">
             <div class="g-label"><b>Verizon Business Markets</b><span>Senior TPM, Digital Platform &middot; 2017&ndash;2018</span></div>
-            <div class="track"><span class="seg" style="--s:51.75%;--e:57.46%"></span></div>
+            <div class="track"><span class="seg" style="--s:51.75%;--e:57.46%"></span><span class="pj" style="--m:55.26%" title="Mobile App &amp; Salesforce Integration, 2018" role="img" aria-label="Selected program: Mobile App &amp; Salesforce Integration, 2018"></span></div>
           </div>
           <div class="g-row" data-tags="program">
             <div class="g-label"><b>Verizon Wireless</b><span>Sr Technical Project Manager, RTE &middot; 2016&ndash;2017</span><span class="imp">&#9670; $100M in savings</span></div>
-            <div class="track"><span class="seg" style="--s:42.11%;--e:51.75%"></span><span class="ms" style="--m:51.75%"></span></div>
+            <div class="track"><span class="seg" style="--s:42.11%;--e:51.75%"></span><span class="ms" style="--m:51.75%"></span><span class="pj" style="--m:44.74%" title="Small Business Retail Simplification, 2016" role="img" aria-label="Selected program: Small Business Retail Simplification, 2016"></span><span class="pj" style="--m:50.0%" title="Paper-Free Transformation, 2017" role="img" aria-label="Selected program: Paper-Free Transformation, 2017"></span></div>
           </div>
           <div class="g-row" data-tags="program">
             <div class="g-label"><b>Verizon Wireless</b><span>Technical Portfolio Manager &middot; 2013&ndash;2015</span><span class="imp">&#9670; $150M+ est. EBITDA savings</span></div>
@@ -600,6 +633,109 @@ footer.fine .wrap { padding-block: 16px calc(16px + env(safe-area-inset-bottom, 
     </div>
   </section>
 
+  <section class="block" id="programs">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow">2016 &rarr; 2025</p>
+          <h2>Selected programs</h2>
+          <p class="note">A program from every year of the last decade, newest first.</p>
+        </div>
+      </div>
+      <ol class="ledger">
+        <li class="prj" data-tags="program ai">
+          <span class="yr">2025</span>
+          <div class="prj-body"><h3>AI-Powered Translation &amp; Chatbot</h3><span class="org mono">Warner Bros. Discovery</span><p>Implemented LLM-based solutions to automate translation workflows and built a chatbot on internal documentation that raised customer satisfaction and reduced ticket volume.</p></div>
+        </li>
+        <li class="prj" data-tags="program ai">
+          <span class="yr">2024</span>
+          <div class="prj-body"><h3>Customer Retention &amp; Personalization Models</h3><span class="org mono">Warner Bros. Discovery</span><p>Led deployment of machine learning models that deliver personalized &ldquo;save offers&rdquo; by identifying high-value customer behaviors, increasing retention and lifetime value across key segments.</p></div>
+        </li>
+        <li class="prj" data-tags="program ai">
+          <span class="yr">2023</span>
+          <div class="prj-body"><h3>Customer Data Platform Integration</h3><span class="org mono">Warner Bros. Discovery</span><p>Delivered a unified platform for customer data management across multiple business units.</p></div>
+        </li>
+        <li class="prj" data-tags="program">
+          <span class="yr">2022</span>
+          <div class="prj-body"><h3>App Prioritization Framework</h3><span class="org mono">Meta</span><p>Designed and implemented a value-versus-effort prioritization framework, using SQL analysis so that high-value requests aligned with the company mission were prioritized first.</p></div>
+        </li>
+        <li class="prj" data-tags="program">
+          <span class="yr">2021</span>
+          <div class="prj-body"><h3>On-Premise Logging &amp; Monitoring Migration</h3><span class="org mono">Meta</span><p>Led the migration from third-party tools to an in-house solution, conducting an in-depth waste analysis and securing buy-in from multiple engineering teams.</p></div>
+        </li>
+        <li class="prj" data-tags="program engineering">
+          <span class="yr">2020</span>
+          <div class="prj-body"><h3>API Platform for Third-Party Engagement</h3><span class="org mono">Barclaycard</span><p>Designed and implemented a scalable API storefront that enables third-party integrations with high availability.</p></div>
+        </li>
+        <li class="prj" data-tags="program engineering">
+          <span class="yr">2019</span>
+          <div class="prj-body"><h3>Microservices Migration to Cloud</h3><span class="org mono">Barclaycard</span><p>Directed the public cloud migration of multiple applications, improving system performance and scalability.</p></div>
+        </li>
+        <li class="prj" data-tags="program engineering">
+          <span class="yr">2018</span>
+          <div class="prj-body"><h3>Mobile App &amp; Salesforce Integration</h3><span class="org mono">Verizon Business Markets</span><p>Technical and program lead for a customer-facing mobile app built with Vlocity DataRaptors and OmniScripts. Managed its Salesforce integration across care, sales, portal, billing and logistics teams, overseeing delivery milestones and reporting across scrum teams.</p></div>
+        </li>
+        <li class="prj" data-tags="program">
+          <span class="yr">2017</span>
+          <div class="prj-body"><h3>Paper-Free Transformation</h3><span class="org mono">Verizon Wireless</span><p>Scrum Master for large-scale agile programs that delivered $40M in annual cost savings through paper-free reduction and efficiencies.</p></div>
+        </li>
+        <li class="prj" data-tags="program">
+          <span class="yr">2016</span>
+          <div class="prj-body"><h3>Small Business Retail Simplification</h3><span class="org mono">Verizon Wireless</span><p>Project manager for a new process that digitized paper contracts and improved the small business onboarding experience.</p></div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="block" id="security">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow">Security track</p>
+          <h2>Cybersecurity journey</h2>
+          <p class="note">Identity, access and secure delivery have run through my programs for years. The CISSP is the next step.</p>
+        </div>
+      </div>
+      <ol class="sec-track">
+        <li class="st" data-tags="program engineering">
+          <span class="node" aria-hidden="true"></span>
+          <span class="when mono">2018</span>
+          <h3>Single sign-on</h3>
+          <span class="org mono">Verizon Business Markets</span>
+          <p>Led the SSO implementation using OpenID Connect and OAuth 2.0.</p>
+        </li>
+        <li class="st" data-tags="program engineering">
+          <span class="node" aria-hidden="true"></span>
+          <span class="when mono">2020&ndash;2023</span>
+          <h3>Security by design</h3>
+          <span class="org mono">Meta</span>
+          <p>Built security, privacy and compliance reviews into the scoping of every on-premise application deployment.</p>
+        </li>
+        <li class="st" data-tags="program engineering">
+          <span class="node" aria-hidden="true"></span>
+          <span class="when mono">2022</span>
+          <h3>Security fundamentals</h3>
+          <span class="org mono">Self-study</span>
+          <p>Studied the CompTIA Security+ curriculum, starting from the CIA triad and the threats against it.</p>
+        </li>
+        <li class="st" data-tags="program engineering">
+          <span class="node" aria-hidden="true"></span>
+          <span class="when mono">2023</span>
+          <h3>Identity and access</h3>
+          <span class="org mono">Warner Bros. Discovery</span>
+          <p>Built an Okta-based identity and access management system that supported SOX compliance, replacing an app&rsquo;s separate username-and-password sign-in.</p>
+        </li>
+        <li class="st target" data-tags="program engineering">
+          <span class="node" aria-hidden="true"></span>
+          <span class="when mono">Feb 2027</span>
+          <h3>CISSP</h3>
+          <span class="org mono">Next</span>
+          <p>Preparing to sit for the CISSP exam, targeting February 2027.</p><span class="pill open">In progress</span>
+        </li>
+      </ol>
+    </div>
+  </section>
+
   <section class="block" id="principles">
     <div class="wrap">
       <div class="sec-head">
@@ -639,6 +775,7 @@ footer.fine .wrap { padding-block: 16px calc(16px + env(safe-area-inset-bottom, 
             <div>PMP, Project Management Institute</div>
             <div>AWS Certified Solutions Architect, Associate</div>
             <div>Lean Six Sigma Green Belt</div>
+            <div>CISSP, preparing for the exam (target February 2027)</div>
           </dd></div>
         </dl>
       </div>
